@@ -1,9 +1,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1em;
-
     margin-bottom: 50px;
-
     color: #fff;
     background-color: #6441a4;
 }
@@ -16,7 +14,6 @@ header {
 h1 {
     font-family: 'Bungee Shade', cursive;
     font-size: 2.5em;
-
     margin: 0;
     padding: 5px;
 }
@@ -24,9 +21,7 @@ h1 {
 .whatson {
     font-size: 1.2em;
     line-height: 50px;
-
     float: left;
-
     margin: 0;
     padding-left: 10px;
 }
@@ -39,69 +34,62 @@ main {
 
 .menu {
     overflow: hidden;
-
     height: 50px;
-
     background-color: #2e3033;
 }
 
 .menu::after {
-      display: table;
-      clear: both;
-      content: '';
-  }
+    display: table;
+    clear: both;
+    content: '';
+}
 
 .btn {
     font-family: 'Ubuntu', sans-serif;
-
     float: right;
-
     height: 40px;
     margin: 5px 5px 5px 0;
     padding: 10px;
-
     cursor: pointer;
-
     color: #fff;
     border: none;
 }
 
 .btn:hover {
-        opacity: .8;
-    }
+    opacity: .8;
+}
+
 .btn-active {
-      background-color: #ae44c8;
-    }
+    background-color: #ae44c8;
+}
+
 .btn-inactive {
-      background-color: #453e4a;
+    background-color: #453e4a;
 }
 
 .streamers-list {
     font-size: 1em;
-
     margin: 4px 0;
-
     color: #2e3033;
     background-color: #d4c8e9;
 }
 
 .streamers-list:hover {
-    -webkit-transform: scale(1.01, 1); /* Safari */
-        -ms-transform: scale(1.01, 1); /* IE 9 */
-            transform: scale(1.01, 1);
+    -webkit-transform: scale(1.01, 1);
+    /* Safari */
+    /* IE 9 */
+    transform: scale(1.01, 1);
 }
 
 .logo img {
     float: left;
-
     width: 50px;
     height: 50px;
     padding-right: 10px;
 }
 
-.status-on > .logo img {
+.status-on>.logo img {
     float: left;
-
     width: 100px;
     height: 100px;
     padding-right: 10px;
@@ -109,14 +97,12 @@ main {
 
 .status-on {
     height: 100px;
-
     color: #000;
     background-color: #fff;
 }
 
 .status-off {
     height: 50px;
-
     opacity: .5;
 }
 
@@ -131,19 +117,16 @@ main {
 
 .offline {
     font-size: .8em;
-
     float: right;
-
     padding: 0 5px;
 }
 
 a {
     text-decoration: none;
-
     color: #ae44c8;
 }
 
-footer > a:hover {
+footer>a:hover {
     text-decoration: underline;
 }
 
@@ -153,16 +136,12 @@ a:visited {
 
 footer {
     font-size: .8em;
-
     position: fixed;
     bottom: 0;
     left: 0;
-
     width: 100%;
     padding: 10px 0;
-
     text-align: center;
-
     color: #fff;
     background-color: #1e1e1e;
 }
