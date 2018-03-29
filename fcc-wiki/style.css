@@ -1,0 +1,71 @@
+body {
+    background-color: #e2e2e2;
+    font-family: "Droid Sans", sans-serif;
+}
+
+h1 {
+    font-family: "Droid Serif", serif;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button a:visited {
+    color: #fff;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 90vw;
+    width: 400px;
+}
+
+input {
+    width: 400px;
+    max-width: 90vw;
+    margin: auto;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid #404044;
+    background-image: url("https://www.w3schools.com/css/searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+button {
+    width: 400px;
+    max-width: 90vw;
+    background-color: #404044;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    clear: left;
+    margin: 5px 0;
+    border: none;
+}
+
+button:hover {
+    background-color: #19191e;
+    color: #e2e2e2;
+    border: 1px solid #000;
+}
+
+.snippet {
+    clear: left;
+    padding: 10px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.title {
+    clear: left;
+    margin: 5px;
+    padding-top: 15px;
+    max-width: 80%;
+}
