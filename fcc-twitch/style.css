@@ -32,13 +32,13 @@ main {
     margin: auto;
 }
 
-.menu {
+nav {
     overflow: hidden;
     height: 50px;
     background-color: #2e3033;
 }
 
-.menu::after {
+nav::after {
     display: table;
     clear: both;
     content: '';
