@@ -1,0 +1,93 @@
+/* --------------------------
+  Base
+--------------------------- */
+
+body {
+    padding-top: 60px;
+    background: #0f4e7a;
+}
+
+svg {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+/* --------------------------
+    Keyframes
+  --------------------------- */
+
+@-webkit-keyframes popup {
+    30% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    80% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1) rotate(-5deg);
+        transform: scale(1.1) rotate(-5deg);
+        opacity: 1;
+        fill: yellow;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes offset {
+    60% {
+        stroke-opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes offset {
+    60% {
+        stroke-opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* --------------------------
+    SVG Styles
+  --------------------------- */
+
+.stars * {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+.stars-bg {
+    stroke-opacity: 0;
+    stroke-dasharray: 815;
+    stroke-dashoffset: 815;
+    -webkit-animation: offset 1.5s linear infinite;
+    animation: offset 1.5s linear infinite;
+}
+
+.star {
+    -webkit-transform: translateY(0, 180px, 0);
+    transform: translateY(0, 180px, 0);
+    animation: popup .5s forwards, pulse .6s ease-out infinite;
+    -webkit-animation: popup .5s forwards, pulse .6s ease-out infinite;
+}
