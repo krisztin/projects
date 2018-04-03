@@ -8,23 +8,14 @@ h1 {
     text-align: center;
 }
 
-button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-button a:visited {
-    color: #fff;
-}
-
 .wrapper {
-    margin: auto;
+	margin: auto;
     max-width: 90vw;
     width: 400px;
 }
 
 input {
-    width: 400px;
+	width: 400px;
     max-width: 90vw;
     margin: auto;
     font-size: 1.5em;
@@ -37,7 +28,7 @@ input {
 }
 
 button {
-    width: 400px;
+	width: 400px;
     max-width: 90vw;
     background-color: #404044;
     color: #fff;
@@ -51,9 +42,18 @@ button {
 }
 
 button:hover {
-    background-color: #19191e;
+	background-color: #19191e;
     color: #e2e2e2;
     border: 1px solid #000;
+}
+
+button a {
+	text-decoration: none;
+	color: #fff;
+}
+
+button a:visited {
+	color: #fff;
 }
 
 .snippet {
