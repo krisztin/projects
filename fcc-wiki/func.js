@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-  console.log("itworks")
   //get data from API
   function fetch(query) {
     return $.ajax({
@@ -20,8 +19,7 @@ $(document).ready(function () {
   // rendering data credit: https://www.roessland.com/blog/free-code-camp-5-a-wikipedia-viewer/
 
   function render(results) {
-    //var output = $("#results");
-    var html = results.map(function (result) {
+    let resultSnippet = results.map(function (result) {
         return (
           '<div class="title">' +
           "<h3>" +
@@ -42,14 +40,15 @@ $(document).ready(function () {
         );
       })
       .join("\n\n");
+    //clearing old search results if there was any
     $("#results").html("");
-    $(html).appendTo($("#results"));
+    $(resultSnippet).appendTo($("#results"));
   }
 
-  // search with button
+  // search with button element
   $("#searchBtn").on("click", function (e) {
     e.preventDefault();
-    var query = $("#search").val();
+    let query = $("#search").val();
     fetch(query).done(function (data) {
       render(data.query.search);
     });
@@ -58,7 +57,7 @@ $(document).ready(function () {
   // search with enter
   $("#search").keydown(function (e) {
     if (e.keyCode == 13) {
-      var query = $("#search").val();
+      let query = $("#search").val();
       fetch(query).done(function (data) {
         render(data.query.search);
       });
