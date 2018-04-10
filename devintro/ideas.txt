@@ -1,4 +1,15 @@
-Step 0 - Before you do any work, think it through
+TIPS
+- make notes online, use google drive or any other cloud solution so you can have access to it anywhere you are
+
+
+LETS WORK
+Step[-1] - Coursework - Don't try to run before you can walk
+- Make sure you prioratise your coursework to learn the basics of your chosen languages
+- Practice, practice and practice some more
+- Then go back to your practice exercises, revisit your code, improve it when you've learned something new
+
+Step[0] - Before you do any work, think it through
 - Check the ticket. Make sure you understand all the requirements. If something is unclear ask for clarification. You don't want to end up doing work that will only be thrown out as it was not on brief.
 - Stretch yourself, yes, but don't overextend. Be realistic about your skills.
 It's OK to want to do more, to learn but take into consideration the amount of learning needed.- Plan before you code. Make sure you have a basic structure of what you are building in your head.
+- 
