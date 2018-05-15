@@ -98,10 +98,10 @@ html {
             align-items: center;
   }
 
-  .panel > *:first-child { -webkit-transform: translate(-100%); transform: translate(-100%); }
-  .panel > *:last-child { -webkit-transform: translate(100%); transform: translate(100%); }
-  .panel.open-active > *:first-child { -webkit-transform: translate(0); transform: translate(0); }
-  .panel.open-active > *:last-child { -webkit-transform: translate(0); transform: translate(0); }
+  .panel > *:first-child { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+  .panel > *:last-child { -webkit-transform: translateY(100%); transform: translateY(100%); }
+  .panel.open-active > *:first-child { -webkit-transform: translateY(0); transform: translateY(0); }
+  .panel.open-active > *:last-child { -webkit-transform: translateY(0); transform: translateY(0); }
 
 
   .panel p {
