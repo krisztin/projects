@@ -1,0 +1,53 @@
+body {
+  background-color: #eee;
+  color: #000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  font-size: 1.5em;
+}
+
+.btn {
+  border: 3px solid #000;
+  background-color: #fff;
+  font-size: 0.6em;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn:hover {
+  opacity: .5;
+  border: 2px solid #000;
+}
+
+span {
+  font-size: 2.2em;
+}
+
+footer {
+  position: fixed;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+a,
+a:visited {
+  color: #85e085;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
