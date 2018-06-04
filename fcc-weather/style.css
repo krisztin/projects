@@ -1,29 +1,32 @@
 body {
   background-color: #eee;
   color: #000;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1em;
   text-align: center;
-  padding: 10px;
 }
 
 main {
   font-size: 1.5em;
+  padding: 10px;
 }
 
 .btn {
   border: 3px solid #000;
   background-color: #fff;
-  font-size: 0.6em;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 10px;
   cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 .btn:hover {
-  opacity: .5;
-  border: 2px solid #000;
+  border: 4px solid #000;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+button[disabled] {
+  display: none;
 }
 
 span {
@@ -32,9 +35,9 @@ span {
 
 footer {
   position: fixed;
-  height: 50px;
+  max-height: 4em;
   background-color: #000;
-  color: #fff;
+  color: #eee;
   bottom: 0px;
   left: 0px;
   right: 0px;
