@@ -7,6 +7,9 @@ let output = document.getElementById("wrapper");
 fahBtn.addEventListener("click", convertToF);
 celsBtn.addEventListener("click", convertToC);
 
+// button default
+celsBtn.disabled = true;
+
 // Data
 let localTemp = 0;
 
@@ -15,10 +18,9 @@ function getTemp() {
     output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
   }
   function success(position) {
-    //#1 grabbing coordinates
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    //#2 json get with coordinates
+    
     $.getJSON(
       "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon
     ).done(data => {
@@ -44,6 +46,9 @@ function convertToF() {
   
   tempValue.innerHTML = Math.round(localTemp * 9 / 5 + 32);
   tempScale.innerHTML = "°F";
+  
+  fahBtn.disabled = true;
+  celsBtn.disabled = false;
 }
 
 function convertToC() {
@@ -52,8 +57,13 @@ function convertToC() {
   
   tempValue.innerHTML = localTemp;
   tempScale.innerHTML = "°C";
+  
+  fahBtn.disabled = false;
+  celsBtn.disabled = true;
 }
 
+// this is porbably an overkill as there is barely any DOM content
+// but let's say it's for veeeery slow connections
 document.addEventListener("DOMContentLoaded", () => {
   getTemp();
 });
