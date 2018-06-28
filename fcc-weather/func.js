@@ -1,19 +1,23 @@
-// HTML elements
-const fahBtn = document.getElementById("fahBtn");
-const celsBtn = document.getElementById("celsBtn");
-let output = document.getElementById("wrapper");
+document.addEventListener("DOMContentLoaded", () => {
+  // HTML elements
+  const fahBtn = document.getElementById("fahBtn");
+  const celsBtn = document.getElementById("celsBtn");
 
-// Button clicky clicky aka EVENTS
-fahBtn.addEventListener("click", convertToF);
-celsBtn.addEventListener("click", convertToC);
+  // Data
+  const localTemp = 0;
+  
+  // Button clicky clicky aka EVENTS
+  fahBtn.addEventListener("click", convertToF);
+  celsBtn.addEventListener("click", convertToC);
 
-// button default
-celsBtn.disabled = true;
+  // button default
+  celsBtn.disabled = true;
 
-// Data
-let localTemp = 0;
+  getTemp();
+});
 
 function getTemp() {
+  let output = document.getElementById("wrapper");
   if (!navigator.geolocation) {
     output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
   }
@@ -61,9 +65,3 @@ function convertToC() {
   fahBtn.disabled = false;
   celsBtn.disabled = true;
 }
-
-// this is porbably an overkill as there is barely any DOM content
-// but let's say it's for veeeery slow connections
-document.addEventListener("DOMContentLoaded", () => {
-  getTemp();
-});
