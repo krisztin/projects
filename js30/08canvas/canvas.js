@@ -13,25 +13,25 @@ let lastY = 0;
 let hue = 0;
 
 function draw(e) {
-    if(!isDrawing) return;
-    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-    ctx.beginPath();
-    //start from
-    ctx.moveTo(lastX, lastY);
-    // go to
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.stroke();
-    [lastX, lastY] = [e.offsetX, e.offsetY]; // ES6 way of creating two variables at once
+  if (!isDrawing) return;
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  ctx.beginPath();
+  // start from
+  ctx.moveTo(lastX, lastY);
+  // go to
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  [lastX, lastY] = [e.offsetX, e.offsetY]; // ES6 way of creating two variables at once
 
-    hue++;
-    if(hue >= 360) {
-        hue = 0;
-    }
+  hue += 1;
+  if (hue >= 360) {
+    hue = 0;
+  }
 }
 
 canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
 canvas.addEventListener('mousemove', draw);

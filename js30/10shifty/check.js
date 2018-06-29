@@ -3,20 +3,20 @@ const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 let lastChecked;
 
 function check(e) {
-    let inBetween = false;
+  let inBetween = false;
 
-    if(e.shiftKey && this.checked) {
-        checkboxes.forEach(checkbox => {
-            if(checkbox === this || checkbox === lastChecked) {
-                inBetween = !inBetween;
-            }
-            if(inBetween) {
-                checkbox.checked = true;
-            }
-        });
-    }
+  if (e.shiftKey && this.checked) {
+    checkboxes.forEach((checkbox) => {
+      if (checkbox === this || checkbox === lastChecked) {
+        inBetween = !inBetween;
+      }
+      if (inBetween) {
+        checkbox.checked = true;
+      }
+    });
+  }
 
-    lastChecked = this;
+  lastChecked = this;
 }
 
-checkboxes.forEach(checkbox => checkbox.addEventListener('click', check))
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', check));

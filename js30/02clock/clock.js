@@ -18,7 +18,7 @@ function setDate() {
   const secondsDegrees = ((seconds / 60) * 360);
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-  if (secondsDegrees == 0) {
+  if (secondsDegrees === 0) {
     hand.removeProperty('transition');
   }
 }

@@ -14,7 +14,8 @@ console.log(players, team);
 
 // oh no - we have edited the original array too!
 
-// Why? It's because that is an array reference, not an array copy. They both point to the same array!
+// Why? It's because that is an array reference, not an array copy.
+// They both point to the same array!
 
 // So, how do we fix this? We take a copy instead!
 const team2 = players.slice();
@@ -37,8 +38,8 @@ const team5 = Array.from(players);
 
 // with Objects
 const person = {
-    name: 'Wes Bos',
-    age: 80
+  name: 'Wes Bos',
+  age: 80,
 };
 
 // and think we make a copy:
@@ -47,23 +48,25 @@ const person = {
 
 // how do we take a copy instead?
 const cap2 = Object.assign({}, person, {
-    number: 99,
-    age: 12
+  number: 99,
+  age: 12,
 });
 console.log(cap2);
 
 // We will hopefully soon see the object ...spread
 // const cap3 = {...person};
 
-// Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+// Things to note - this is only 1 level deep
+// - both for Arrays and Objects. lodash has a cloneDeep method,
+// but you should think twice before using it.
 
 const wes = {
-    name: 'Wes',
-    age: 100,
-    social: {
-        twitter: '@wesbos',
-        facebook: 'wesbos.developer'
-    }
+  name: 'Wes',
+  age: 100,
+  social: {
+    twitter: '@wesbos',
+    facebook: 'wesbos.developer',
+  },
 };
 
 console.clear();
@@ -71,5 +74,6 @@ console.log(wes);
 
 const dev = Object.assign({}, wes);
 
-// this isn't the prettiest solution and should look into performance before using 'poor man's deep clone'
+// this isn't the prettiest solution
+// and should look into performance before using 'poor man's deep clone'
 const dev2 = JSON.parse(JSON.stringify(wes));
