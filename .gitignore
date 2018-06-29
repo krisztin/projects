@@ -34,3 +34,10 @@
 ehthumbs.db
 Thumbs.db
 **/desktop.ini
+
+# npm #
+node_modules
+package.json
+
+# lint #
+.eslintrc.js
