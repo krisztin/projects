@@ -38,11 +38,11 @@ function saveIssue(e) {
   };
 
   if (localStorage.getItem('issues') === null) {
-    let issues = [];
+    const issues = [];
     issues.push(issue);
     localStorage.setItem('issues', JSON.stringify(issues));
   } else {
-    let issues = JSON.parse(localStorage.getItem('issues'));
+    const issues = JSON.parse(localStorage.getItem('issues'));
     issues.push(issue);
     localStorage.setItem('issues', JSON.stringify(issues));
   }
@@ -55,3 +55,17 @@ function saveIssue(e) {
 }
 
 document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
+
+function setStatusClosed(id) {
+  const issues = JSON.parse(localStorage.getItem('issues'));
+
+  for (let i = 0; i < issues.length; i++) {
+    if (issues[i].id === id) {
+      issues[i].status = 'Closed';
+    }
+  }
+
+  localStorage.setItem('issues', JSON.stringify(issues));
+
+  fetchIssues();
+}
