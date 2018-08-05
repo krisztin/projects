@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  getTemp();
   // HTML elements
   const fahBtn = document.getElementById('fahBtn');
   const celsBtn = document.getElementById('celsBtn');
-  // Data
-  let localTemp;
   // Button clicky clicky aka EVENTS
   fahBtn.addEventListener('click', convertToF);
   celsBtn.addEventListener('click', convertToC);
   // button default
   celsBtn.disabled = true;
-  getTemp();
 });
 
 function getTemp() {
@@ -24,13 +22,15 @@ function getTemp() {
     $.getJSON(
       `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`,
     ).done((data) => {
-      let localTemp = Math.round(data.main.temp);
+      localTemp = Math.round(data.main.temp);
       output.innerHTML = `
         <p>It is <span id="temp">${localTemp}</span>
         <span id="cf">°C</span>
         in <span>${data.name}</span>.
         If you look outside, you should see <span>${data.weather[0].description}</span>.</p>
         `;
+      tempScale = document.getElementById('cf');
+      tempValue = document.getElementById('temp');
     });
   }
   function error() {
@@ -42,9 +42,6 @@ function getTemp() {
 
 // C to F converter
 function convertToF() {
-  const tempScale = document.getElementById('cf');
-  const tempValue = document.getElementById('temp');
-
   tempValue.innerHTML = Math.round(localTemp * 9 / 5 + 32);
   tempScale.innerHTML = '°F';
 
@@ -53,9 +50,6 @@ function convertToF() {
 }
 
 function convertToC() {
-  const tempScale = document.getElementById('cf');
-  const tempValue = document.getElementById('temp');
-
   tempValue.innerHTML = localTemp;
   tempScale.innerHTML = '°C';
 
