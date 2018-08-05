@@ -1,7 +1,7 @@
 const hourHand = document.querySelector('.hour-hand');
 const minuteHand = document.querySelector('.min-hand');
 const secondHand = document.querySelector('.second-hand');
-const hand = document.querySelector('.hand');
+const hands = document.querySelectorAll('.hand');
 
 function setDate() {
   const now = new Date();
@@ -19,7 +19,9 @@ function setDate() {
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   if (secondsDegrees === 0) {
-    hand.removeProperty('transition');
+    hands.forEach(hand => hand.style.transition = 'none');
+  } else {
+    hands.forEach(hand => hand.style.transition = '');
   }
 }
 
