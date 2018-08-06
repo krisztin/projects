@@ -8,6 +8,7 @@
 
 body {
   font-size: 16px;
+  margin: 0;
 }
 
 /*
@@ -16,11 +17,12 @@ body {
 
 .wrapper {
   max-width: 800px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .wide {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -37,25 +39,32 @@ section {
 }
 
 .flex {
+  width: 100%;
   flex: 1;
-  min-width: 200px;
+  min-width: 300px;
 }
 
 .hero {
   text-align: center;
   margin-bottom: 7rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .centre {
   text-align: center;
 }
 
-.links a {
+.footer-links a {
   margin-right: 2rem;
 }
 
-.links a:last-child {
+.footer-links a:last-child {
   margin-right: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 /*
@@ -70,12 +79,38 @@ section {
   letter-spacing: 3px;
 }
 
+@media screen and (max-width: 730px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .footer-links a {
+    display: block;
+    margin: 2rem 0;
+    border-bottom: none;
+  }
+  .footer-links a:hover {
+    border-bottom: none;
+  }
+}
+
 h1 {
   font-size: 2rem;
 }
 
 .pop {
   color: var(--pop);
+}
+
+.pop-bg {
+  background: var(--pop);
+  padding: 6px;
+  color: #fff;
 }
 
 a {
@@ -90,11 +125,18 @@ a:hover{
   border-bottom: 5px solid var(--pop);
 }
 
+li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+/*
+* Elements
+*/
+
 figure {
   position: relative;
   margin: auto;
-  width: 600px;
-  height: 320px;
 }
 
 .gradient {
@@ -145,6 +187,7 @@ figure:hover figcaption {
 }
 
 .btn-outline:hover {
-  background: var(--light);
+  background: var(--primary);
+  color: #fff;
   border: 2px solid var(--primary);
 }
